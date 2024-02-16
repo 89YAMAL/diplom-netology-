@@ -1,4 +1,4 @@
-// 1 Управление залами
+// Управление залами
 let trashHall = Array.from(document.querySelectorAll('[data-delHall-id]'));
 let deletePopup = document.getElementById('deletePopup');
 let delModalDismiss = document.getElementById('delModalDismiss');
@@ -8,7 +8,7 @@ let addModalDismiss = document.getElementById('addModalDismiss');
 let ul = [...document.querySelectorAll('.hallDeleteList')];
 let popupName = document.querySelector('.popupHallName');
 
-//Delete popup btn
+//Delete popup
 delModalDismiss.addEventListener('click', function (e) {
     e.preventDefault();
     deletePopup.classList.toggle('active');
@@ -86,7 +86,7 @@ for (let i = 0; i < trashHall.length; i++) {
 }
 
 
-// 2 Конфигурация залов
+// Конфигурация залов
 
 const rowCount = document.getElementById('input_rows_count');
 const placeCount = document.getElementById('input_places_count');
@@ -96,7 +96,7 @@ let hallRadio = [...document.querySelectorAll('.conf-step__radio.hide')];
 let hallWrapper = [...document.querySelectorAll('.conf-step__hall-wrapper')];
 
 
-//Переключение кресел
+// Переключение кресел
 const chairChecked = () => {
     const chairs = Array.from(document.querySelectorAll('.conf-step__row .conf-step__chair'));
     chairs.forEach(chair => chair.addEventListener('click', () => {
@@ -162,7 +162,7 @@ for (let i = 0; i < chairsHall.length; i++) {
  })
 }
 
-// обновление категорий мест в зале
+// Обновление категорий мест в зале
 $(document).ready(function () {
  $('#hallSizeSaveBtn').click(function (e) {
      const rows = Number(rowCount.value);
@@ -216,7 +216,7 @@ chairChecked();
 
 
 
-// 3 Конфигурация цен
+// Конфигурация цен
 let chairPrice = Array.from(document.getElementsByName('prices-hall'));
 let standartPrice = document.getElementById('standartPrice');
 let vipPrice = document.getElementById('vipPrice');
@@ -299,7 +299,8 @@ chairPrice.forEach(hall => hall.addEventListener('click', function (e) {
 
 
 
-// 4 Сетка сеансов 4.1 Добавление и удаление фильма
+// Сетка сеансов 
+// Добавление и удаление фильма
 let addMovie = document.getElementById('addMovie');
 let addMoviePopup = document.getElementById('addMoviePopup');
 let moviePopupDismiss = document.getElementById('moviePopupDismiss');
@@ -367,7 +368,7 @@ $(document).ready(function () {
 })
 
 
-// 4.2
+// 
 let showMovie = [...document.querySelectorAll('.conf-step__seances-movie')];
 let delShowTimePopup = document.getElementById('delShowtimePopup');
 let popupMovieName = document.querySelector('.popupMovieName');
@@ -424,13 +425,13 @@ showTimeAdd.forEach(movie => {
     })
 })
 
-//close seances
+// Закрыть сеанс
 showTimePopupDismiss.addEventListener('click', function (e) {
     e.preventDefault();
     addShowTimePopup.classList.toggle('active');
 })
 
-// add film
+// Добавить фильм
 $(document).ready(function () {
     $('#seanceAddForm').submit(function (e) {
         let movieName = $('#seance_movieName').val();
@@ -461,12 +462,12 @@ $(document).ready(function () {
 })
 
 
-// 5 Открыть продажи
+// Открыть продажи
 let startSales = [...document.getElementsByName('startOfSales-hall')];
 let openHall = document.querySelector('.open-hall');
 let startSalesBtn = document.querySelector('.startOfSalesBtn');
 
-// start sales
+// Старт продаж
 startSales.forEach(radio => {
     radio.addEventListener('click', () => {
         if (radio.classList.contains('is_active')) {
@@ -510,7 +511,7 @@ startSales.forEach(radio => {
     })
 })
 
-// 6 Кнопка отмена
+// Кнопка отмена
 let cancelBtn = Array.from(document.querySelectorAll('.conf-step__button-regular'));
 
 for (let x = 0; x < cancelBtn.length; x++) {
