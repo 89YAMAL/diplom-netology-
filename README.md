@@ -23,8 +23,8 @@ Laravel - 10.43.0
 2. Изменить название файла ".env.example" на ".env"
 3. В файле ".env" указать абсолютный путь в переменной DB_DATABASE=/Users/......./database/database.sqlite
 4. Установить composer (если отсутствует)
-5. Установить laravel в папку проекта.
-6. В терминале выполните команду npm i, далее клманду npm run build
+5. Установить laravel в папку проекта (php composer.phar require laravel/ui)
+6. В терминале выполните команду npm i, далее команду npm run build
 7. В терминале выполните php artisan key:generate
 8. Запустить сервер php artisan serve (в терминале)
 
